@@ -1,5 +1,7 @@
+username = ENV['VAGRANT_CLOUD_USERNAME'] || 'mrbarker'
+
 Vagrant.configure("2") do |config|
-    config.vm.box = "mcandre/alpine-amd64"
+    config.vm.box = username + "/alpine-amd64"
 
     config.vm.provision "file", source: "flag.txt", destination: "/home/vagrant/flag.txt"
     config.vm.provision "shell", path: "bootstrap.sh", privileged: false

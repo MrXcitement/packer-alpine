@@ -1,7 +1,7 @@
 PROVIDER ?= virtualbox
 
-
 .PHONY: test test-boot test-flag test-bootstrap test-sync test-shutdown
+
 all: test clean
 
 test: test-boot test-flag test-bootstrap test-sync test-shutdown
